@@ -14,4 +14,5 @@ def root():
 
 @app.post("/predict/")
 def predict(item: Item):
+    """Sentiment analysis for a text"""
     return classifier(item.text )[0]
